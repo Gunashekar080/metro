@@ -1,0 +1,1243 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2509
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red247\green247\blue247;\red255\green255\blue255;
+\red0\green0\blue0;\red0\green0\blue233;\red251\green0\blue7;\red15\green112\blue1;\red146\green26\blue32;
+\red0\green0\blue194;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c97647\c97647\c97647;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0\cname textColor;\cssrgb\c0\c0\c93333;\cssrgb\c100000\c0\c0;\cssrgb\c0\c50196\c0;\cssrgb\c64706\c16471\c16471;
+\cssrgb\c0\c0\c80392;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19980\viewh12540\viewkind1
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs36 \cf2 \expnd0\expndtw0\kerning0
+console.log("Demo") \
+console is a global object\
+\
+In variables \
+var a=10\
+console.log(a)\
+\
+\
+var a=10\
+var b=20\
+var c=a+b\
+console.log(a)\
+console.log(b)\
+console.log(c)\
+\
+\
+var d="Hello"\
+var e="Hello"\
+console.log(d)\
+console.log(e)\
+\
+\
+a="Hello World"\
+console.log(a)\
+\
+\
+var a\
+console.log(typeof a)\
+a=10\
+console.log(typeof a)\
+a="Hello"\
+console.log(typeof a)\
+a=true\
+console.log(typeof a)\
+a=null\
+console.log(typeof a)\
+\
+\
+var a=10\
+var b="10"\
+if(a==b)\
+\{\
+  console.log("Equal")\
+\}\
+\
+\
+var a=10\
+var b="10"\
+if(a===b)\
+\{\
+  console.log("Equal")\
+\}\
+\
+\
+var a=10\
+if(a)\
+\{\
+  console.log("val is true")\
+\}\
+\
+var a=10\
+if(a)\
+\{\
+  console.log("val is true")\
+\}\
+\
+var a="Hello"\
+if(a)\
+\{\
+  console.log("val is true")\
+\}\
+\
+var a=""\
+if(a)\
+\{\
+  console.log("val is true")\
+\}\
+else\
+\{\
+console.log("val is false")\
+\}\
+\
+var a=undefined\
+if(a)\
+\{\
+  console.log("val is true")\
+\}\
+else\
+\{\
+console.log("val is false")\
+\}\
+\
+var a=null\
+if(a)\
+\{\
+  console.log("val is true")\
+\}\
+else\
+\{\
+console.log("val is false")\
+\}\
+\
+\
+
+\fs74 JSON - Java Script Object Notation
+\fs36 \
+Objects\
+var obj=\{\}\
+console.log(obj)\
+\
+\
+obj.prop="Hello"\
+console.log(obj)\
+\
+\
+obj.prop2=123\
+console.log(obj)\
+console.log(obj.prop2)\
+\
+\
+var obj=\{\
+"prop":"Hello",\
+"prop2":123\
+\}\
+console.log(obj)\
+console.log(obj.prop2)\
+console.log(obj.prop3)\
+\
+console.log(obj["prop2"])\
+\
+var obj=\{"1":"Manish"\}\
+console.log(obj["1"])\
+\
+var obj=\{\
+"prop":"Hello",\
+"prop2":123\
+\}\
+var propName="prop"\
+console.log(obj[propName])\
+\
+Nested Object\
+var obj=\{\
+"prop":"Hello",\
+"prop2":123\
+"demo":\{"one":"Manish"\}\
+\}\
+console.log(obj.demo)\
+console.log(obj.demo.one)\
+console.log(obj.demo["one"])\
+obj.demo.two="Hello World"\
+\
+\
+var obj=\{\
+"prop":"Hello",\
+"prop2":123\
+\}\
+var obj2=obj\
+if(obj===obj2)\{\
+console.log("Equal")\
+\}\
+\
+\
+\
+Revisiting null & undefined\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \ul \ulc2 For case of object\ulnone \
+var obj=\{\
+"prop":"Hello",\
+"prop2":123\
+\}\
+console.log(obj.prop3)\
+\
+var obj=\{\
+"prop":"Hello",\
+"prop2":123,\
+"prop3":null\
+\}\
+console.log(obj.prop3)\
+\
+\ul For a normal variable\ulnone  which is not declared will throw an error\
+\
+Deleting properties\
+person=\{"fname":"Manish",\
+"mnmae":null,\
+"lname":"Hurkat"\}\
+If you write (to delete mname)\
+person.mnmae=undefined\
+and then console.log(person) will still show the property\
+\
+To delete it \
+delete person.mname\
+and check with\
+console.log(person)\
+--------------------------\
+\ul Arrays\ulnone \
+An array is an object\
+If you try to access array values out of bounds\
+var sam=["one","two","three"]\
+console.log(sam[1]) //Just like objects\
+console.log(sam[4])\
+To find the length of array\
+sam.length\
+\
+How to add value to an array?\
+sam[3]="Four"\
+Check it by\
+sam\
+Again find the length of array\
+sam.length\
+\
+sam[0]\
+sam["0"]. //so sam is an object with property 0\
+or type\
+sam //and show in output that it is an object with properties\
+But we can't use dot notation because property is a number\
+How does sam[0] works - JS converts 0 to string 0 automatically - Implicit conversion\
+Now\
+sam[4]\
+sam[4]="Five"\
+sam[400]="Demo"\
+sam\
+Check the length property\
+So length prop doesn't counts the number of elements. It shows the largest index + 1\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \cb3 Wrapper Objects\
+Is string a primitive\
+var greet="Hello World"\
+greet.length. //dot notation with objects\
+Is greet an object or string(primitive)\
+typeof greet\
+So JS has equivalent objects for each of the primitive type.\
+\
+\ul Functions\ulnone \
+function sayHello()\{\
+console.log("Hello")\
+\}\
+sayHello()\
+\uc0\u8232 function sayHello(name)\{\
+console.log("Hello "+name)\
+\}\
+sayHello("Manish")\
+\cb4 \uc0\u8232 \cb1 \
+\cb3 function sayHello(name,id)\{\
+console.log("Hello "+name +" ID "+id)\
+\}\
+sayHello("Manish",123)\cb1 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \ul Variable arguments with function\ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \cb3 function sayHello(name,id)\{\
+console.log("Hello "+name +" ID "+id)\
+\}\
+sayHello("Manish")\cb1 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \ul With extra argument\ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \cb3 function sayHello(name,id)\{\
+console.log("Hello "+name +" ID "+id)\
+\}\
+sayHello("Manish",123,45)\cb1 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \ul Return Value\ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \cb3 function sayHello(name)\{\
+return "Hello "+name\
+\}\
+var res=sayHello("Manish")\cb1 \
+console.log(res)\
+\
+\cb3 function sayHello(name)\{\
+return \
+\}\
+var res=sayHello("Manish")\cb1 \
+console.log(res)\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \ul Function Expression\ulnone \
+var sam="Demo"\
+var f=function foo()\{\
+console.log("Hello")\
+\}\
+f()\
+\
+//function declaration\
+function foo()\{\
+console.log("Hello")\
+\}\
+//function expression\
+var f=function foo()\{\
+console.log("Hello")\
+\};\
+\
+\ul Anonymous Function\ulnone \
+var f=function()\{\
+console.log("Hello")\
+\};\
+f();\
+\
+f=10\
+f(). //function is lost\
+\
+\ul Functions as Arguments\ulnone \
+var f=function()\{\
+console.log("Hello")\
+\};\
+var executor=function(fn)\{\
+console.log(fn)\
+\}\
+executor(). //first\
+executor("Manish") //Second\
+executor(f). //Third\
+\
+var f=function()\{\
+console.log("Hello")\
+\};\
+var executor=function(fn)\{\
+fn()\
+\}\
+executor(f) \
+\
+var f=function(name)\{\
+console.log("Hello "+name)\
+\};\
+var executor=function(fn,name)\{\
+fn(name)\
+\}\
+executor(f,"Manish") \
+\
+\ul Functions on Objects\ulnone \
+var myObj=\{\
+"testProp":true\
+\}\
+myObj.myMethod=function()\{\
+console.log("Hello")\
+\}\
+myObj.myMethod()\
+\
+\ul this keyword\ulnone \
+var person=\{\
+"fName":"Manish",\
+"lName":"Hurkat",\
+"getFullName":function()\{\
+return person.fName+" "+person.lName\
+\}\
+\}\
+var fullName=person.getFullName()\
+console.log(fullName)\
+\
+Now the problem with the code\
+var person=\{\
+"fName":"Manish",\
+"lName":"Hurkat",\
+getFullName":function()\{\
+return person.fName+" "+person.lName\
+\}\
+\}\
+var fullName=person.getFullName()\
+var person2=person\
+person=\{\}\
+console.log(person2.getFullName())\
+\
+Solution\
+var person=\{\
+"fName":"Manish",\
+"lName":"Hurkat",\
+getFullName":function()\{\
+return this.fName+" "+this.lName\
+\}\
+\}\
+var fullName=person.getFullName()\
+var person2=person\
+person=\{\}\
+console.log(person2.getFullName())\
+\
+Question\
+var person=\{\
+"fName":"Manish",\
+"lName":"Hurkat",\
+getFullName":function()\{\
+return this.fName+" "+this.lName\
+\},\
+"address":\{\
+"street":"123 JS Street",\
+"city":"JS",\
+"state":"CA"\
+\}\
+\}\
+person.isFromState("CA") //define this function\
+\
+Solution\
+var person=\{\
+"fName":"Manish",\
+"lName":"Hurkat",\
+getFullName":function()\{\
+return this.fName+" "+this.lName\
+\},\
+"address":\{\
+"street":"123 JS Street",\
+"city":"JS",\
+"state":"CA"\
+\},\
+"isFromState":function(state)\{\
+if(this.address.state===state)\{\
+return true\
+\}\
+else\{\
+return false\
+\}\
+\}\
+console.log(person.isFromState("abc"))\
+\
+Or\
+var person=\{\
+"fName":"Manish",\
+"lName":"Hurkat",\
+getFullName":function()\{\
+return this.fName+" "+this.lName\
+\},\
+"address":\{\
+"street":"123 JS Street",\
+"city":"JS",\
+"state":"CA"\
+\},\
+"isFromState":function(state)\{\
+return (this.address.state===state)\
+\}\
+\}\
+console.log(person.isFromState("abc"))\
+\
+\ul Default function arguments\ulnone \
+(var args)-arguments\
+var add=function(a,b)\{\
+console.log(arguments);\
+return a+b;\
+\};\
+console.log(add(10,30));\
+\
+Then call it with\
+console.log(add(10,30,1,2,3));\
+\
+Now argument as an array\
+var add=function(a,b)\{\
+var i,sum=0\
+for(i=0;i<arguments.length;i++)\{\
+sum+=arguments[i]\
+\}\
+return sum;\
+\}\
+console.log(add(10,20,1,2,3)\
+\
+The arguments value is not an array\
+\
+\ul Array Methods\ulnone \
+var myArray=[10,20,"Hello",\{\}]\
+myArray.push(10)\
+myArray\
+myArray.pop()\
+myArray\
+myArray.shift()\
+myArray()\
+myArray.unshift("abc")\
+myArray\
+\
+\ul Array forEach method\ulnone \
+forEach method takes function as an argument\
+var myArray=[10,20,"Hello",\{\}]\
+var myFunction=function()\{\
+console.log("For each element")\
+\}\
+myArray.forEach(myFunction)\
+\
+var myArray=[10,20,"Hello",\{\}]\
+var myFunction=function(item)\{\
+console.log("element "+item)\
+\}\
+myArray.forEach(myFunction)\
+\
+var myArray=[10,20,"Hello",\{\}]\
+myArray.forEach(function(item)\{\
+console.log("element "+item)\
+\}\
+)\
+\
+Math Function\
+Date Function\
+\
+\ul Scopes and Closures\ulnone \
+Scopes\
+\{\
+var a=10\
+\}//in ablock\
+//it can also be an if block or for loop block in language like C,C++,Java but not in JS\
+\
+\ul Function scoping in JS\ulnone \
+JS has function scoping not block scoping\
+var name="Manish"\
+if (name=="Manish")\{\
+dept="Executive"\
+\}\
+console.log(name)\
+console.log(dept)\
+\
+var name="abc"\
+if (name=="Manish")\{\
+    dept="Executive". //it should be var dept="Executive"\
+\}\
+console.log(name)\
+console.log(dept)\
+\
+var name="Manish"\
+function allocDepart()\{\
+if (name=="Manish")\{\
+var dept="Executive"\
+\}\
+\}\
+allocDepart()\
+console.log(dept)\
+\
+var top=10\
+function foo()\{\
+var inner=20\
+console.log(inner)\
+\}\
+foo()\
+\
+var top=10\
+var inner=50\
+function foo()\{\
+var inner=20\
+console.log(inner)\
+\}\
+foo()\
+\
+var top=10\
+var inner=50\
+function foo()\{\
+var inner=20\
+\}\
+foo()\
+console.log(inner)\
+\
+What shall I do so that var a and b are not global in the given code\
+var a=10\
+var b=20\
+console.log(a+b)\
+\
+Wrap them in a function scope\
+function myFunc()\{\
+var a=10\
+var b=20\
+console.log(a+b)\
+\}\
+myFunc()\
+\
+var name="Manish"\
+function greet(name)\{\
+console.log("Hello "+name)\
+\}\
+greet("Hurkat")\
+\
+Global variables are bad\
+What shall I do so that var a and b are not global in the given code\
+var a=10\
+var b=20\
+console.log(a+b)\
+\
+Wrap them in a function scope\
+function myFunc()\{\
+var a=10\
+var b=20\
+console.log(a+b)\
+\}\
+myFunc()\
+But in this process we have introduced another global variable\
+So make anonymous function\
+function()\{\
+var a=10\
+var b=20\
+console.log(a+b)\
+\}\
+But now how do you execute it?\
+(function()\{\
+var a=10\
+var b=20\
+console.log(a+b)\
+\})();  //IIFE\
+IIFE-Immediately Invoke Function Expression\
+\
+-------------\
+Read and Write Operations\
+If you do a read operation on a variable without declaring - error\
+If you do a write operation on a variable without declaring - it runs\
+e.g.\
+a=10. //we have not declared var a\
+console.log(a)\
+\
+\ul The window object - Global Object\ulnone \
+window - click and show the properties\
+Now\
+var a= 10\
+Again check window object\
+var name="Manish"\
+Again check window object\
+So when you create a global variable - you are creating a property on global object - window\
+We can access a and name directly or window.a (window.name)\
+The same concept work on function\
+function myFunc()\{\
+console.log("Hello")\
+\}\
+Again check window object\
+This window object is there because we are using browser runtime. So it is different for different runtime\
+In case if it is Node - the global object name is global\
+\
+\
+\
+\ul Compilation and Interpretation\ulnone \
+\
+JS is both interpreted and compiled\
+JS is interpreted - the runtime directly executes the code\
+There is also a compilation step before it executes the code\
+1st step - compilation - browser looks into your source code and identifying a set of things (make note of certain signs). It doesn't generates internediatary file.\
+2nd step - interpretation\
+\
+\ul Compilation Phase\ulnone \
+\
+Understanding Compilation\
+var a=10\
+var b=20\
+console.log(a+b)\
+\
+var a=10\
+function myFn()\{\
+  var b=20\
+  var c=b\
+  console.log(a+b)\
+\}\
+myFn()\
+\
+var myName="Manish"\
+function greet(name)\{\
+  console.log("hello "+name)\
+\}\
+greet(myName)\
+\
+Interpretation Step\
+It is going to look at scope chain (for variables)\
+var myName="Manish"\
+function greet(name)\{\
+  console.log("hello "+name)\
+\}\
+greet(myName)\
+\
+\ul The global scope problem\ulnone \
+Till now we have declared variable with var keyword. But what if you don't write var keyword\
+\
+var a=10\
+function myFn()\{\
+  var b=a\
+  console.log(b)\
+  console.log(c)\
+\}\
+myFn()\
+(Show scope)\
+\
+var a=10\
+function myFn()\{\
+  var b=a\
+  console.log(b)\
+  c=100. //you don't write var keyword\
+\}\
+myFn()\
+(Show scope)\
+Variable c is created in global scope while executing (interpretation step)\
+-------------\
+\ul Questions\ulnone \
+\
+var a=10\
+function outer()\{\
+  var b=a\
+  console.log(b)\
+  function inner()\{\
+    var b=20\
+    var c=b\
+    console.log(c)\
+  \}\
+  inner()\
+\}\
+outer()\
+\
+Now\
+var a=10\
+function outer()\{\
+  var b=a\
+  console.log(b)\
+  function inner()\{\
+    //var b=20. Moved at the end of function\
+    var c=b\
+    console.log(c)\
+    var b=20\
+  \}\
+  inner()\
+\}\
+outer()\
+\
+console.log(a)\
+var a=10\
+\
+\pard\pardeftab720\sl320\sa280\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 var, let and const\
+use strict\
+destructuring\
+spread operator\
+spread with destructuring\
+map\
+weak map\
+set\
+weak set\
+class\
+iterators and generators\
+promises\
+proxy\
+callback\
+async/await - promise and async\
+asynchronous callback\
+\
+arrow function\
+var, let and const\
+\
+var name="Manish"\
+if (name=="Manish")\{\
+  let dept="Executive"\
+\}\
+console.log(name)\
+console.log(dept)\
+\
+\pard\pardeftab720\partightenfactor0
+\cf5 //original function scope\
+var foo="foo"\
+//similar to var, block scope\
+let bar="bar"\
+//cannot be reassigned\
+const baz="baz"\
+A constant cannot be reassigned\
+But\
+const foo=\{\
+one:"Hello",\
+two:\{\
+three:"good bye"\
+\}\
+\}\
+foo = "good" //cannot reassign\
+foo.two.three="not good bye"\
+\
+Question\
+function varTest()\{\
+var foo=true\
+if(true)\{\
+var foo=false\
+console.log(foo)\
+\}\
+console.log(foo)\
+\}\
+varTest()\
+\
+Question\
+function letTest()\
+\{\
+let foo=true\
+if(true)\
+\{\
+let foo=false\
+console.log(foo)\
+\}\
+console.log(foo)\
+\}\
+letTest()\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf5 \ul \ulc5 Destructuring
+\f0\b0 \ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 The 
+\f1\b destructuring assignment
+\f0\b0  syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 let a, b, rest;\
+[a, b] = [10, 20];\
+console.log(a);\
+// expected output: 10\
+console.log(b);\
+// expected output: 20\
+[a, b, ...rest] = [10, 20, 30, 40, 50];\
+console.log(rest);\
+// expected output: Array [30,40,50]\
+\
+var one=["foo","bar","baz"]\
+var foo=one[0]\
+var bar=one[1]\
+var baz=one[2]\
+console.log(foo,bar,baz)\
+\
+Or (using destructuring)\
+var one=["foo","bar","baz"]\
+var[foo,bar,baz]=one\
+console.log(foo,bar,baz)\
+\
+var one=\{\
+foo:"hello",\
+bar:"goodbye",\
+baz:"hello again"\
+\}\
+//var foo=one.foo\
+//var bar=one.bar\
+//var baz=one.baz\
+var \{foo,bar,baz\}=one\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf5 \ul Spread Operator
+\f0\b0 \ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf2 Spread syntax
+\f0\b0  (
+\f2 ...
+\f0 ) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.\
+function foo(one, two, three)\{\
+console.log(one)\
+\}\
+var arr=[0,1,2]\
+foo(arr)\
+It will print [0,1,2]\
+We want the value of the passed array to be spread\
+//foo.apply(null,arr)\
+foo(...arr) //...-spread operator. Spread out the value of array to individual items\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf5 \ul Spread with Destructuring
+\f0\b0 \ulnone \
+var arr=[1,2,3,4,5]\
+var [a,b,c,d,e]=arr\
+console.log(a)\
+Now combining destructuring with spread operator\
+var arr=[1,2,3,4,5]\
+var [a,b,...theRest]=arr\
+console.log(a)\
+console.log(b)\
+console.log(theRest)\
+\
+var arrayOne=['thing','otherthing']\
+var arrayTwo=['foo','bar',arrayOne,'baz']\
+console.log(arrayTwo)\
+\
+Now with spread\
+var arrayOne=['thing','otherthing']\
+var arrayTwo=['foo','bar',...arrayOne,'baz']\
+console.log(arrayTwo)\
+\
+var weblanguages=['html','css','JS']\
+var serverlang=['php','asp','java']\
+How can you join these two arrays in one array?\
+var fullstack=[... weblanguages,... serverlang]\
+console.log(fullstack)\
+var compprog=['c','c++']\
+fullstack.push(... compprog)\
+\
+\
+
+\f1\b \ul Rest parameters
+\f0\b0 \ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 The 
+\f1\b rest parameter
+\f0\b0  syntax allows a function to accept an indefinite number of arguments as an array\
+Rest syntax looks exactly like spread syntax. In a way, rest syntax is the opposite of spread syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element.\
+\
+function myFunc(arg1,arg2,...rest)\{\
+console.log(rest)\
+\}\
+myFunc(1,2,3,4,5,6,7)\
+myFunc(1,2)\
+\
+let sum=function(...args)\{\
+console.log(args)\
+\}\
+console.log(sum(2,3,4,5))\
+\
+The 
+\f2 arguments
+\f0  object is 
+\f1\b not a real array
+\f0\b0 , while rest parameters are {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"}}{\fldrslt 
+\f2 \cf6 \ul \ulc6 Array}} instances, meaning methods like {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"}}{\fldrslt 
+\f2 \cf6 \ul \ulc6 sort}}, {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"}}{\fldrslt 
+\f2 \cf6 \ul \ulc6 map}}, {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"}}{\fldrslt 
+\f2 \cf6 \ul \ulc6 forEach}} or {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"}}{\fldrslt 
+\f2 \cf6 \ul \ulc6 pop}} can be applied on it directly;\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf2 \ul \ulc2 Arrow functions
+\f0\b0 \ulnone \
+var fn=()=>'Hello World'\
+\
+euivalent of\
+var fn=function()\{\
+  return 'Hello World'\
+\}\
+\
+var things=[1,2,3,4,5]\
+things.map(function(thing)\{\
+console.log(thing)\
+\})\
+\pard\pardeftab720\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \
+Get rid of function keyword and type =>\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 var things=[1,2,3,4,5]\
+things.map((thing)=>\{\
+console.log(thing)\
+\})\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 Or\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 var things=[1,2,3,4,5]\
+things.map((thing)=>console.log(thing))\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 (Since there is only one line function so no \{\})\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf5 Template Literals (or Template Strings)
+\f0\b0 \
+console.log(`Text`) (back text or back quote)\
+\
+Now \
+console.log("Hello\
+World") //Error\
+\
+So\
+console.log("Hello \\n"+\
+            "World")\
+Now\
+console.log(`Hello \
+            World`)\
+\
+var foo='bar'\
+var baz='bar'\
+console.log("The first thing is "+foo+\
+" and the second thing is "+baz) //Notice space\
+Or\
+console.log(`the first thing is $\{foo\} and the \
+second thing is $\{baz\}`)\
+\
+
+\f1\b \ul Hoisting
+\f0\b0 \ulnone  - \cf2 Hoisting is JavaScript's default behavior of moving declarations to the top.\
+\pard\pardeftab720\sl440\sa298\partightenfactor0
+
+\f1\b \cf2 JavaScript Declarations are Hoisted\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\b0 \cf2 In JavaScript, a variable can be declared after it has been used.\
+In other words; a variable can be used before it has been declared.\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 x = \cf7 5\cf2 ; \cf8 // Assign 5 to x\
+\cf2 \
+elem = document.getElementById(\cf9 "demo"\cf2 ); \cf8 // Find an element \
+\cf2 elem.innerHTML = x;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf8 // Display x in the element\
+\cf2 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf10 var\cf2  x; \cf8 // Declare x \cf5 \
+\
+Hoisting works both for functions and variables\
+myFun1()\
+function myFn1()\{\
+console.log("Here")\
+\}\
+\
+This happen for function declaration only not with function expression\
+\
+fnA()\
+var fnA=function()\{\
+console.log("Here")\
+\}\
+\
+\
+Use Strict - Variables need to be declared before use\
+\
+var myName="Manish";\
+myname="Amit" //A typo error\
+\
+"use strict";\
+var myName="Manish";\
+myname="Amit" //A typo error\
+\
+If u have other library code and you want ur code to be in strict mode\
+\
+function fnA()\{\
+  "use strict";\
+  var myName="Manish";\
+  myname="Amit" //A typo error\
+\}\
+So only ur function runs in strict mode\
+\
+Closures - Function remembers their scope\
+\
+var a=10;\
+function outer()\{\
+  var b=20;\
+  function inner()\{\
+    console.log(a);\
+    console.log(b);\
+  \}\
+  inner();\
+\}\
+outer();\
+\
+Here the function inner is being called where it is declared but in JS we have first class functions - you can create a function and pass it around and execute somewhere else. So function can be exceuted in a completely different scope from where it was declared.\
+\
+var a=10;\
+function outer()\{\
+  var b=20;\
+  var inner=function ()\{\
+    console.log(a);\
+    console.log(b);\
+  \}\
+  return inner;  //outer is returning a function\
+\}\
+\
+var innerFn=outer();\
+innerFn();\
+\
+\
+var a=10;\
+function outer()\{\
+  var b=20;\
+  var inner=function ()\{\
+    a++;\
+    b++;\
+    console.log(a);\
+    console.log(b);\
+  \}\
+  return inner;  //outer is returning a function\
+\}\
+\
+var innerFn=outer();\
+innerFn();\
+var innerFn2=outer();\
+innerFn2();\
+\
+Callback\
+JS is single threaded. It doesn't have functions like wait or pause. \
+var a=100;\
+//wait for 5 sec\
+setTimeout()\
+console.log(a);\
+\
+var a=10;\
+var fn=function()\{\
+  console.log(a);\
+\}\
+setTimeout(fn,5000);\
+console.log("Done")\
+\
+Module Pattern\
+JS doesn't have private and protected\
+var person=\{\
+  "firstName":"Manish",\
+  "lastName":"Hurkat",\
+  "getFirstName":function()\{\
+    return firstName;\
+  \},\
+  "gettLarstName":function()\{\
+    return LastName;\
+  \}\
+\}\
+\
+But I can access person.firstName\
+\
+Now\
+function createPerson()\{\
+  var returnObj=\{\
+    "firstName":"Manish",\
+    "lastName":"Hurkat",\
+    "getFirstName":function()\{\
+      return this.firstName;\
+    \},\
+    "gettLarstName":function()\{\
+      return this.LastName;\
+    \}\
+  \};\
+  return returnObj;\
+\}\
+var person=createPerson();\
+console.log(person.firstName)\
+Still we can access person.firstName\
+\
+So,\
+function createPerson()\{\
+  var firstName="Manish"\
+  var lastname="Hurkat"\
+  var returnObj=\{\
+    \
+    "getFirstName":function()\{\
+      return firstName;\
+    \},\
+    "gettLarstName":function()\{\
+      return LastName;\
+    \}\
+  \};\
+  return returnObj;\
+\}\
+var person=createPerson();\
+console.log(person.firstName)\
+Now it doesn't work\
+But\
+console.log(person.getFirstName()) //works because of closures.\
+Moreover,\
+function createPerson()\{\
+  var firstName="Manish"\
+  var lastname="Hurkat"\
+  var returnObj=\{\
+    "getFirstName":function()\{\
+      return this.firstName;\
+    \},\
+    "gettLarstName":function()\{\
+      return this.LastName;\
+    \},\
+  "setFirstName":function(name)\{\
+      firstName=name;\
+    \},\
+    "settLarstName":function(name)\{\
+      LastName=name;\
+    \}\
+\
+  \};\
+  return returnObj;\
+\}\
+\
+\
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf5 \ul Map
+\f0\b0 \ulnone \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 The 
+\f2 map()
+\f0  method creates a new array with the results of calling a function for every array element.\
+The 
+\f2 map()
+\f0  method calls the provided function once for each element in an array, in order.\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1\b \cf2 Note:
+\f0\b0  
+\f2 map()
+\f0  does not execute the function for array elements without values.\
+
+\f1\b Note:
+\f0\b0  this method does not change the original array.\cf5 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 var a=[1,2,3]\
+var b=a.map(test)\
+function test(x)\{\
+return x*10;\
+\}\
+\
+var a=[\
+\{'fname':'Manish','lname':'Hurkat'\},\
+\{..\}\
+]\
+var b=a.map(test)\
+function test(x)\
+\{\
+return x.fname\
+\}\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 s\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\fs24 \cf2 Classes serve as 
+\f1\b templates to create new objects
+\f0\b0 . The most important thing to remember: Classes are just normal JavaScript functions and could be completely replicated without using the class syntax. It is special syntactic sugar added in ES6 to make it easier to declare and inherit complex objects.
+\fs36 \
+\
+\
+/*let myPromise = new Promise((resolve, reject) => \{\
+  resolve("Good to go")\
+\})*/\
+async function abc()\{\
+   var x=0\
+   if (x==0)\
+     throw new Error("Thrown from thisThrows()");\
+   else\
+   	return "Good to go"\
+ \}\
+abc()\
+/*abc().then((data) => \{\
+  console.log(data)\
+\}).catch((err) => \{\
+  console.log("Manish "+err)\
+\})*/\
+\
+var myMap=new Map();\
+console.log(myMap.size)\
+myMap.set('foo','bar')\
+console.log(myMap.size)\
+console.log(myMap.get('foo'))\
+\
+\
+}
